@@ -156,7 +156,7 @@ export default function Contact() {
                   </Link>
 
                   <Link
-                    href="https://linkedin.com/in/vidhi"
+                    href="https://www.linkedin.com/in/vidhisingh14/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-peach-600 dark:hover:text-primary transition-colors"
