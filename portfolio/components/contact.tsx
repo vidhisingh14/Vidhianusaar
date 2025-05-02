@@ -162,7 +162,7 @@ export default function Contact() {
                     className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-peach-600 dark:hover:text-primary transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
-                    <span>linkedin.com/in/vidhi</span>
+                    <span>linkedin.com/in/vidhisingh14</span>
                   </Link>
 
                   <Link
