@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Peach and cream theme */
+    --background: 30 33% 98%;
+    --foreground: 20 10% 15%;
+
+    --card: 30 33% 98%;
+    --card-foreground: 20 10% 15%;
+
+    --popover: 30 33% 98%;
+    --popover-foreground: 20 10% 15%;
+
+    --primary: 20 100% 70%;
+    --primary-foreground: 20 10% 15%;
+
+    --secondary: 35 80% 95%;
+    --secondary-foreground: 20 10% 15%;
+
+    --muted: 35 80% 95%;
+    --muted-foreground: 20 10% 40%;
+
+    --accent: 20 100% 90%;
+    --accent-foreground: 20 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 30 33% 98%;
+
+    --border: 20 10% 85%;
+    --input: 20 10% 85%;
+    --ring: 20 100% 70%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.5% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Custom gradient backgrounds for light mode */
+.light body {
+  background-color: #fff5eb;
+}
+
+.light .hero-gradient {
+  background: linear-gradient(135deg, #fff5eb 0%, #ffe8d9 100%);
+}
+
+.light .section-gradient-1 {
+  background: linear-gradient(135deg, #fff9f5 0%, #fff0e8 100%);
+}
+
+.light .section-gradient-2 {
+  background: linear-gradient(135deg, #fff5eb 0%, #ffece0 100%);
+}
+
+/* Custom styles for dark mode with stars */
+.dark body {
+  background-color: #050b18;
+}
+
+.dark .hero-gradient {
+  background: linear-gradient(135deg, #050b18 0%, #0a1428 100%);
+}
+
+.dark .section-gradient-1 {
+  background: linear-gradient(135deg, #071020 0%, #0c1930 100%);
+}
+
+.dark .section-gradient-2 {
+  background: linear-gradient(135deg, #050b18 0%, #0a1428 100%);
+}

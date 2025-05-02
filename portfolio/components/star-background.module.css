@@ -1,0 +1,117 @@
+/* Star background animation - pure CSS solution */
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 230px 50px, #ffffff, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0;
+  animation: stars-animation 8s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.stars2 {
+  background-image: radial-gradient(2px 2px at 100px 50px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 200px 100px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 300px 30px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 400px 80px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 500px 60px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 50px 180px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 150px 150px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 250px 120px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 350px 200px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 450px 180px, #ffffff, rgba(0, 0, 0, 0));
+  background-size: 500px 500px;
+  animation: stars-animation 15s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.stars3 {
+  background-image: radial-gradient(1px 1px at 50px 80px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 100px 150px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 150px 220px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 200px 120px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 250px 90px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 300px 180px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 350px 50px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 400px 200px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 450px 120px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 500px 160px, #ffffff, rgba(0, 0, 0, 0));
+  background-size: 500px 500px;
+  animation: stars-animation 20s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes stars-animation {
+  0% {
+    opacity: 0.3;
+    transform: rotate(0deg) scale(0.8);
+    animation-timing-function: ease-in;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+    transform: rotate(180deg) scale(1.2);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.3;
+    transform: rotate(360deg) scale(0.8);
+    animation-timing-function: ease-in;
+  }
+}
+
+/* Add a subtle shooting star animation */
+.stars::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: -100px;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  animation: shooting-star 8s linear infinite;
+  animation-delay: 3s;
+  transform: rotate(20deg);
+}
+
+@keyframes shooting-star {
+  0% {
+    opacity: 0;
+    transform: translateX(0) rotate(20deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(1000px) rotate(20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(1000px) rotate(20deg);
+  }
+}
