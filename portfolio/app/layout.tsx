@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Vidhianusaar - Technical Writer, Designer & Frontend Developer",
   description:
     "Portfolio of Vidhianusaar, showcasing technical writing, design work, and frontend development projects.",
-    generator: 'v0.dev'
+    generator: 'vidhi'
 }
 
 export default function RootLayout({
