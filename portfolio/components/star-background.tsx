@@ -19,6 +19,8 @@ export default function StarBackground() {
 
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none" aria-hidden="true">
+      {/* Add a dark background to ensure stars are visible */}
+      <div className="absolute inset-0 bg-[#050b18]"></div>
       <div className={styles.stars}></div>
       <div className={styles.stars2}></div>
       <div className={styles.stars3}></div>

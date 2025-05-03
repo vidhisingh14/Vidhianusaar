@@ -103,17 +103,17 @@ html {
 
 /* Custom styles for dark mode with stars */
 .dark body {
-  background-color: #050b18;
+  background-color: transparent; /* Changed to transparent to let stars show through */
 }
 
 .dark .hero-gradient {
-  background: linear-gradient(135deg, #050b18 0%, #0a1428 100%);
+  background: linear-gradient(135deg, rgba(5, 11, 24, 0.7) 0%, rgba(10, 20, 40, 0.7) 100%); /* Added transparency */
 }
 
 .dark .section-gradient-1 {
-  background: linear-gradient(135deg, #071020 0%, #0c1930 100%);
+  background: linear-gradient(135deg, rgba(7, 16, 32, 0.7) 0%, rgba(12, 25, 48, 0.7) 100%); /* Added transparency */
 }
 
 .dark .section-gradient-2 {
-  background: linear-gradient(135deg, #050b18 0%, #0a1428 100%);
+  background: linear-gradient(135deg, rgba(5, 11, 24, 0.7) 0%, rgba(10, 20, 40, 0.7) 100%); /* Added transparency */
 }
