@@ -85,9 +85,8 @@ export default function About() {
               <Button
                 variant="outline"
                 className="mt-4 border-peach-300 hover:bg-peach-100 dark:border-gray-700 dark:hover:bg-gray-800"
-                asChild
               >
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/resume.pdf" download="Vidhi_Resume.pdf" className="flex items-center">
                   <FileDown className="mr-2 h-4 w-4" />
                   Download Resume
                 </a>
