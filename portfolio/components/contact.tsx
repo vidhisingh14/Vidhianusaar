@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -9,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+import emailjs from "@emailjs/browser"
 
 type FormData = {
   name: string
@@ -32,16 +32,25 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setError("")
 
-    // Log form data to console (as per requirements)
-    console.log("Form submitted:", formData)
+    try {
+      // Send email using EmailJS with hardcoded credentials
+      const result = await emailjs.send(
+        "service_4hae7ks", // Replace with your EmailJS Service ID
+        "template_17y74lh", // Replace with your EmailJS Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "k9gx1cemYE0So0cq-" // Replace with your EmailJS Public Key
+      )
 
-    // Simulate form submission
-    setTimeout(() => {
+      console.log("Email sent successfully:", result.text)
       setIsSubmitting(false)
       setSubmitted(true)
 
@@ -50,7 +59,11 @@ export default function Contact() {
 
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitted(false), 5000)
-    }, 1000)
+    } catch (err) {
+      console.error("Email sending failed:", err)
+      setError("Failed to send message. Please try again later.")
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -65,7 +78,7 @@ export default function Contact() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Get in Touch</h2>
           <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-            Let&apos;s connect to create something amazing together! Feel free to reach out for collaborations,
+            Let's connect to create something amazing together! Feel free to reach out for collaborations,
             questions, or just to say hello.
           </p>
 
@@ -132,7 +145,7 @@ export default function Contact() {
 
                 {submitted && (
                   <p className="text-green-600 dark:text-green-400 text-center">
-                    Thank you for your message! I&apos;ll get back to you soon.
+                    Thank you for your message! I'll get back to you soon.
                   </p>
                 )}
 
