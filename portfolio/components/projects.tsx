@@ -5,13 +5,15 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
+import image1 from "../public/image.png"
+import image2 from "../public/Doctorlist.png"
 
 const projects = [
   {
     title: "Dynamic Form Application",
     description:
       "A React-based application that dynamically renders and validates multi-section forms based on API data. Features include user registration, dynamic form rendering, and section-based validation.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: image1,
     liveLink: "https://dynamic-form-umber.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/dynamic-form",
     techStack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
@@ -20,7 +22,7 @@ const projects = [
     title: "DoctorList Appointment Booking",
     description:
       "A Next.js application for booking doctor appointments, fetching doctor details via API, and displaying online/offline availability.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: image2,
     liveLink: "https://doctorlist-seven.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/doctorlist",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],

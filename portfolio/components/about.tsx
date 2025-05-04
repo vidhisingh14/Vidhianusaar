@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { FileDown } from "lucide-react"
 
+
 const skills = [
   "Technical Writing",
   "Adobe Photoshop",
@@ -39,7 +40,7 @@ export default function About() {
             >
               <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-2xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/vidhi@bang.jpg"
                   alt="Vidhi's portrait"
                   width={400}
                   height={400}

@@ -170,7 +170,7 @@ export default function Contact() {
                     className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-peach-600 dark:hover:text-primary transition-colors"
                   >
                     <Mail className="h-5 w-5" />
-                    <span>itsvidhisingh@gmail</span>
+                    <span>itsvidhisingh@gmail.com</span>
                   </Link>
                 </div>
               </div>
