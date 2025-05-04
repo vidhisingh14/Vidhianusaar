@@ -27,6 +27,17 @@ const experiences = [
     ],
   },
   {
+    title: "AWS Cloud Computation Intern",
+    company: "AICTE",
+    period: "January 2024 - February 2024",
+    description:
+      "Formed a foundationa understanding of deploying, managing, and operating on the cloud.",
+    details: [
+      "Gained hands-on experience with AWS services, cloud concepts, security, architecture, pricing, and support.",
+      "Completed training on AWS cloud fundamentals, earning the AWS Cloud Foundation badge.",
+    ],
+  },
+  {
     title: "Designer & Web Developer",
     company: "Sector 11",
     period: "2023 - 2024",
