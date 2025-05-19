@@ -7,8 +7,18 @@ import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 import image1 from "../public/image.png"
 import image2 from "../public/Doctorlist.png"
+import image3 from "../public/SDG_NFT_FRONT.png"
 
 const projects = [
+  {
+    title: "SDG NFT Verification Platform",
+    description:
+      "A blockchain-based platform to authenticate corporate SDG contributions using NFTs and IPFS. It features user and verifier dashboards for submission and review, NFT minting with CSR scores, and transparent verification on Polygon using Civic Auth, ensuring accountability and combating greenwashing.",
+    image: image3,
+    liveLink: "https://sdg-nft1-latest-three.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/sdg_nft1-latest",
+    techStack: ["React", "Solidity", "IPFS", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Web3.js"],
+  },
   {
     title: "Dynamic Form Application",
     description:
