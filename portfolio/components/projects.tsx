@@ -8,8 +8,28 @@ import Link from "next/link"
 import image1 from "../public/image.png"
 import image2 from "../public/Doctorlist.png"
 import image3 from "../public/SDG_NFT_FRONT.png"
+import image4 from "../public/Velocity_front.png"
+import image5 from "../public/ReportEase_front.png"
 
 const projects = [
+  {
+    title: "ReportEase",
+    description:
+      "An AI-driven platform that digitalizes FIR analysis using Mistral-AI and Tesseract-OCR, tracks accused crime records via CCTNS, and provides IPC/CrPC suggestions with 98% accuracy.",
+    image: image5,
+    liveLink: "https://report-ease-lovat.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/ReportEase",
+    techStack: ["React", "Python", "Flask", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Chart.js"],
+  },
+  {
+    title: "Velocity",
+    description:
+      "A blockchain-based social platform on Polygon enabling secure bounty hosting and participation, leveraging Solidity for NFT creation, IPFS for decentralized storage, and optimized for the Shardem Testnet.",
+    image: image4,
+    liveLink: "https://layer2-0-five.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/Velocity_0.1",
+    techStack: ["React", "Solidity", "IPFS", "Node.js", "Express", "Firebase", "Tailwind CSS"],
+  },
   {
     title: "SDG NFT Verification Platform",
     description:
