@@ -13,7 +13,7 @@ const writings = [
     description:
       "An in-depth exploration of how Bitcoin mining has evolved from CPU mining to ASIC farms, and the impact on the cryptocurrency ecosystem.",
     date: "March 2023",
-    link: "#",
+    link: "https://droomdroom.com/evolution-of-bitcoin-mining/",
     publisher: "DroomDroom",
   },
   {
@@ -21,7 +21,7 @@ const writings = [
     description:
       "Analyzing the intersection of Web3 technologies and artificial intelligence, and how they're shaping the future of decentralized applications.",
     date: "January 2023",
-    link: "#",
+    link: "https://droomdroom.com/evolution-of-web3-with-ai/",
     publisher: "DroomDroom",
   },
   {
@@ -29,7 +29,7 @@ const writings = [
     description:
       "A comprehensive guide to understanding cryptocurrency airdrops, their legitimate uses, and how to protect yourself from common scams.",
     date: "November 2022",
-    link: "#",
+    link: "https://droomdroom.com/understanding-crypto-airdrops/",
     publisher: "DroomDroom",
   },
 ]
