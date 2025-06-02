@@ -32,14 +32,37 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
+  const sendTelegramNotification = async (formData: FormData) => {
+    try {
+      const response = await fetch('/api/send-telegram', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to send Telegram notification')
+      }
+
+      const result = await response.json()
+      console.log('Telegram notification sent successfully:', result)
+    } catch (error) {
+      console.error('Error sending Telegram notification:', error)
+      // Don't throw error here to avoid failing the entire form submission
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setError("")
 
     try {
-      // Send email using EmailJS with hardcoded credentials
-      const result = await emailjs.send(
+      // Send email using EmailJS
+      const emailResult = await emailjs.send(
         "service_4hae7ks", // Replace with your EmailJS Service ID
         "template_17y74lh", // Replace with your EmailJS Template ID
         {
@@ -50,7 +73,11 @@ export default function Contact() {
         "k9gx1cemYE0So0cq-" // Replace with your EmailJS Public Key
       )
 
-      console.log("Email sent successfully:", result.text)
+      console.log("Email sent successfully:", emailResult.text)
+
+      // Send Telegram notification
+      await sendTelegramNotification(formData)
+
       setIsSubmitting(false)
       setSubmitted(true)
 
@@ -60,7 +87,7 @@ export default function Contact() {
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitted(false), 5000)
     } catch (err) {
-      console.error("Email sending failed:", err)
+      console.error("Form submission failed:", err)
       setError("Failed to send message. Please try again later.")
       setIsSubmitting(false)
     }
