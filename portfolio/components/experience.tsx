@@ -14,15 +14,15 @@ const experiences = [
     details: [
       {
         title: "Evolution of Bitcoin Mining: A Journey into Cryptocurrency's Backbone",
-        link: "#",
+        link: "https://droomdroom.com/evolution-of-bitcoin-mining/",
       },
       {
         title: "Evolution of Web3 with AI",
-        link: "#",
+        link: "https://droomdroom.com/evolution-of-web3-with-ai/",
       },
       {
         title: "Unlocking Crypto Airdrops: Identify and Prevent Airdrop Scams",
-        link: "#",
+        link: "https://droomdroom.com/understanding-crypto-airdrops/",
       },
     ],
   },
@@ -47,7 +47,7 @@ const experiences = [
       "Designed posters, logos, and creative assets using Adobe Photoshop and Illustrator",
       "Conducted market research to design trending e-commerce websites for F1 merchandise (clothing and posters)",
     ],
-    companyLink: "#",
+    companyLink: "https://sector11.co/",
   },
   {
     title: "Frontend Developer",
