@@ -67,7 +67,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Hi, I&apos;m Vidhi, a technical content writer, designer, startup enthusiast, and Full Stack developer
+            Hi, I&apos;m Vidhi, Full Stack developer, blockchain enthusiast, designer, and a technical content writer
             passionate about blending creativity with technology and building products that help people.
           </motion.p>
 

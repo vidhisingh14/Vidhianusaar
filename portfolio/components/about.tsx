@@ -7,14 +7,22 @@ import { FileDown } from "lucide-react"
 
 
 const skills = [
-  "Technical Writing",
-  "Adobe Photoshop",
-  "Adobe Illustrator",
+  "Solidity",
   "Web Design",
   "Next.js",
   "TypeScript",
   "React",
   "Tailwind CSS",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Python",
+  "Node.js",
+  "RESTFul APIs",
+  "Technical Writing",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+
   "Market Research",
 ]
 
