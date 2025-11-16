@@ -10,8 +10,48 @@ import image2 from "../public/Doctorlist.png"
 import image3 from "../public/SDG_NFT_FRONT.png"
 import image4 from "../public/Velocity_front.png"
 import image5 from "../public/ReportEase_front.png"
+import image6 from "../public/tradesmart.png"
+import image7 from "../public/Secureswap.png"
+import image8 from "../public/SatoshiVault.png"
+import image9 from "../public/taxlossharvesting.png"
 
 const projects = [
+  {
+    title: "TradeSmart.ai",
+    description:
+      "An AI-powered trading platform using Cerebras and Meta Llama that generates complete trading strategies with technical analysis, liquidation zones, and risk management in under 60 seconds through multi-agent architecture.",
+    image: image6,
+    liveLink: "https://trade-smart-ai.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/TradeSmart.ai",
+    techStack: ["Next.js", "Python", "FastAPI", "Cerebras", "Meta Llama 3.1", "Docker", "TimescaleDB", "Redis", "LangChain", "TradingView SDK", "WebSocket", "Pydantic", "Uvicorn"],
+  },
+  {
+    title: "SecureSwap",
+    description:
+      "A trustless peer-to-peer escrow protocol on Ethereum enabling secure P2P transactions without intermediaries, with zero disputes.",
+    image: image7,
+    liveLink: "https://secureswap-escrow.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/secureswap-escrow",
+    techStack: ["Solidity", "React.js", "Next.js", "TypeScript", "Ethers.js", "Tailwind CSS", "Polygon", "Ethereum"],
+  },
+  {
+    title: "Tax loss harvesting",
+    description:
+      "A web tool for crypto investors to optimize tax strategies by identifying and harvesting realized capital losses across STCG/LTCG holdings.",
+    image: image9,
+    liveLink: "https://tax-loss-harvesting-vidhi.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/tax-loss-harvesting_vidhi",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Radix UI", "React Hook Form", "Zod", "Recharts", "Lucide React"],
+  },
+  {
+    title: "Satoshi Vault",
+    description:
+      "Bitcoin-native yield aggregator on Rootstock with auto-compounding strategies, 1inch swaps, Pyth oracles, and 2% performance fees for optimal DeFi returns.",
+    image: image8,
+    liveLink: "",
+    githubLink: "https://github.com/vidhisingh14/Satoshi_Vault",
+    techStack: ["Next.js", "Python", "FastAPI", "Cerebras", "Meta Llama 3.1", "Docker", "TimescaleDB", "Redis", "LangChain", "TradingView SDK", "WebSocket", "Pydantic", "Uvicorn"],
+  },
   {
     title: "ReportEase",
     description:
