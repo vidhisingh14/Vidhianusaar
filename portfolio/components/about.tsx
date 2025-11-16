@@ -68,8 +68,8 @@ export default function About() {
               </p>
 
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                Currently, I'm building frontend applications with Next.js and TypeScript, combining my technical
-                writing background with design sensibilities to create intuitive and engaging user experiences.
+                Currently, I'm developing full-stack applications with React.js,Next.js and TypeScript, while actively 
+                learning Solidity and blockchain fundamentals to expand my expertise into the Web3 ecosystem.
               </p>
 
               <div>

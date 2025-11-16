@@ -67,8 +67,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Hi, I&apos;m Vidhi, a technical content writer, designer, startup enthusiast, and frontend developer
-            passionate about blending creativity with technology.
+            Hi, I&apos;m Vidhi, a technical content writer, designer, startup enthusiast, and Full Stack developer
+            passionate about blending creativity with technology and building products that help people.
           </motion.p>
 
           <motion.div

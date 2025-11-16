@@ -14,6 +14,7 @@ import image6 from "../public/tradesmart.png"
 import image7 from "../public/Secureswap.png"
 import image8 from "../public/SatoshiVault.png"
 import image9 from "../public/taxlossharvesting.png"
+import image10 from "../public/DAOvoting.png"
 
 const projects = [
   {
@@ -33,6 +34,15 @@ const projects = [
     liveLink: "https://secureswap-escrow.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/secureswap-escrow",
     techStack: ["Solidity", "React.js", "Next.js", "TypeScript", "Ethers.js", "Tailwind CSS", "Polygon", "Ethereum"],
+  },
+  {
+    title: "DAO Voting Platform",
+    description:
+      "A decentralized voting DAO platform on Polygon Amoy testnet enabling transparent proposal creation and blockchain-based voting with 3-day periods.",
+    image: image10,
+    liveLink: "https://dao-platform-ethereum.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/DAO_platform_Ethereum",
+    techStack: ["React", "Vite", "Solidity", "Ethers.js", "MetaMask", "Polygon", "ESLint"],
   },
   {
     title: "Tax loss harvesting",
