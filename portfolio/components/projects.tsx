@@ -5,10 +5,11 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 import image1 from "../public/image.png"
 import image2 from "../public/Doctorlist.png"
 import image3 from "../public/SDG_NFT_FRONT.png"
-import image4 from "../public/Velocity_front.png"
+// import image4 from "../public/Velocity_front.png"
 import image5 from "../public/ReportEase_front.png"
 import image6 from "../public/tradesmart.png"
 import image7 from "../public/Secureswap.png"
@@ -18,15 +19,6 @@ import image10 from "../public/DAOvoting.png"
 
 const projects = [
   {
-    title: "TradeSmart.ai",
-    description:
-      "An AI-powered trading platform using Cerebras and Meta Llama that generates complete trading strategies with technical analysis, liquidation zones, and risk management in under 60 seconds through multi-agent architecture.",
-    image: image6,
-    liveLink: "https://trade-smart-ai.vercel.app/",
-    githubLink: "https://github.com/vidhisingh14/TradeSmart.ai",
-    techStack: ["Next.js", "Python", "FastAPI", "Cerebras", "Meta Llama 3.1", "Docker", "TimescaleDB", "Redis", "LangChain", "TradingView SDK", "WebSocket", "Pydantic", "Uvicorn"],
-  },
-  {
     title: "SecureSwap",
     description:
       "A trustless peer-to-peer escrow protocol on Ethereum enabling secure P2P transactions without intermediaries, with zero disputes.",
@@ -34,6 +26,7 @@ const projects = [
     liveLink: "https://secureswap-escrow.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/secureswap-escrow",
     techStack: ["Solidity", "React.js", "Next.js", "TypeScript", "Ethers.js", "Tailwind CSS", "Polygon", "Ethereum"],
+    category: "Web3",
   },
   {
     title: "DAO Voting Platform",
@@ -43,15 +36,7 @@ const projects = [
     liveLink: "https://dao-platform-ethereum.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/DAO_platform_Ethereum",
     techStack: ["React", "Vite", "Solidity", "Ethers.js", "MetaMask", "Polygon", "ESLint"],
-  },
-  {
-    title: "Tax loss harvesting",
-    description:
-      "A web tool for crypto investors to optimize tax strategies by identifying and harvesting realized capital losses across STCG/LTCG holdings.",
-    image: image9,
-    liveLink: "https://tax-loss-harvesting-vidhi.vercel.app/",
-    githubLink: "https://github.com/vidhisingh14/tax-loss-harvesting_vidhi",
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Radix UI", "React Hook Form", "Zod", "Recharts", "Lucide React"],
+    category: "Web3",
   },
   {
     title: "Satoshi Vault",
@@ -61,6 +46,27 @@ const projects = [
     liveLink: "",
     githubLink: "https://github.com/vidhisingh14/Satoshi_Vault",
     techStack: ["Next.js", "Python", "FastAPI", "Cerebras", "Meta Llama 3.1", "Docker", "TimescaleDB", "Redis", "LangChain", "TradingView SDK", "WebSocket", "Pydantic", "Uvicorn"],
+    category: "Web3",
+  },
+  {
+    title: "SDG NFT Verification System",
+    description:
+      "A blockchain-based platform to authenticate corporate SDG contributions using NFTs and IPFS. It features user and verifier dashboards for submission and review, NFT minting with CSR scores, and transparent verification on Polygon using Civic Auth, ensuring accountability and combating greenwashing.",
+    image: image3,
+    liveLink: "https://sdg-nft1-latest-three.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/sdg_nft1-latest",
+    techStack: ["React", "Solidity", "IPFS", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Web3.js"],
+    category: "Web3",
+  },
+  {
+    title: "TradeSmart.ai",
+    description:
+      "An AI-powered trading platform using Cerebras and Meta Llama that generates complete trading strategies with technical analysis, liquidation zones, and risk management in under 60 seconds through multi-agent architecture.",
+    image: image6,
+    liveLink: "https://trade-smart-ai.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/TradeSmart.ai",
+    techStack: ["Next.js", "Python", "FastAPI", "Cerebras", "Meta Llama 3.1", "Docker", "TimescaleDB", "Redis", "LangChain", "TradingView SDK", "WebSocket", "Pydantic", "Uvicorn"],
+    category: "Web2",
   },
   {
     title: "ReportEase",
@@ -70,24 +76,7 @@ const projects = [
     liveLink: "https://report-ease-lovat.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/ReportEase",
     techStack: ["React", "Python", "Flask", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Chart.js"],
-  },
-  {
-    title: "Velocity",
-    description:
-      "A blockchain-based social platform on Polygon enabling secure bounty hosting and participation, leveraging Solidity for NFT creation, IPFS for decentralized storage, and optimized for the Shardem Testnet.",
-    image: image4,
-    liveLink: "https://layer2-0-five.vercel.app/",
-    githubLink: "https://github.com/vidhisingh14/Velocity_0.1",
-    techStack: ["React", "Solidity", "IPFS", "Node.js", "Express", "Firebase", "Tailwind CSS"],
-  },
-  {
-    title: "SDG NFT Verification Platform",
-    description:
-      "A blockchain-based platform to authenticate corporate SDG contributions using NFTs and IPFS. It features user and verifier dashboards for submission and review, NFT minting with CSR scores, and transparent verification on Polygon using Civic Auth, ensuring accountability and combating greenwashing.",
-    image: image3,
-    liveLink: "https://sdg-nft1-latest-three.vercel.app/",
-    githubLink: "https://github.com/vidhisingh14/sdg_nft1-latest",
-    techStack: ["React", "Solidity", "IPFS", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Web3.js"],
+    category: "Web2",
   },
   {
     title: "Dynamic Form Application",
@@ -97,6 +86,7 @@ const projects = [
     liveLink: "https://dynamic-form-umber.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/dynamic-form",
     techStack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    category: "Tasks",
   },
   {
     title: "DoctorList Appointment Booking",
@@ -106,10 +96,25 @@ const projects = [
     liveLink: "https://doctorlist-seven.vercel.app/",
     githubLink: "https://github.com/vidhisingh14/doctorlist",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    category: "Tasks",
+  },
+  {
+    title: "Tax Loss Harvesting",
+    description:
+      "A web tool for crypto investors to optimize tax strategies by identifying and harvesting realized capital losses across STCG/LTCG holdings.",
+    image: image9,
+    liveLink: "https://tax-loss-harvesting-vidhi.vercel.app/",
+    githubLink: "https://github.com/vidhisingh14/tax-loss-harvesting_vidhi",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Radix UI", "React Hook Form", "Zod", "Recharts", "Lucide React"],
+    category: "Tasks",
   },
 ]
 
 export default function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState<string>("Web3")
+
+  const filteredProjects = projects.filter((project) => project.category === selectedCategory)
+
   return (
     <section id="projects" className="py-20 section-gradient-2">
       <div className="container mx-auto px-4">
@@ -122,8 +127,43 @@ export default function Projects() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Projects</h2>
 
+          <div className="flex justify-center mb-10">
+            <div className="inline-flex rounded-full border-2 border-peach-500 dark:border-blue-600 p-1 bg-gray-100 dark:bg-gray-800">
+              <button
+                onClick={() => setSelectedCategory("Web3")}
+                className={`px-8 py-2 rounded-full text-base font-medium transition-all duration-300 ${
+                  selectedCategory === "Web3"
+                    ? "bg-peach-500 dark:bg-blue-600 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                Web3
+              </button>
+              <button
+                onClick={() => setSelectedCategory("Web2")}
+                className={`px-8 py-2 rounded-full text-base font-medium transition-all duration-300 ${
+                  selectedCategory === "Web2"
+                    ? "bg-peach-500 dark:bg-blue-600 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                Web2
+              </button>
+              <button
+                onClick={() => setSelectedCategory("Tasks")}
+                className={`px-8 py-2 rounded-full text-base font-medium transition-all duration-300 ${
+                  selectedCategory === "Tasks"
+                    ? "bg-peach-500 dark:bg-blue-600 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                Tasks
+              </button>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <motion.div
                 key={index}
                 className="bg-white/80 dark:bg-gray-900 rounded-xl overflow-hidden shadow-md"
