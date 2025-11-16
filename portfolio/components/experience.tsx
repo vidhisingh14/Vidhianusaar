@@ -5,10 +5,45 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 const experiences = [
+
+  {
+    title: "Full Stack Developer",
+    company: "Catalystix",
+    period: "June 2025 - September 2025",
+    description: "Architected and deployed full-stack AI agents and scalable web solutions, driving measurable business impact.",
+    details: [
+      "Built interactive AI agents using Node.js and React with integrated LLM APIs",
+  "Engineered A/B testing framework in Next.js that increased client conversion rates by 50%",
+  "Developed and deployed scalable RESTful APIs on AWS for thousands of daily user interactions"
+]
+  },
+  {
+    title: "Designer & Web Developer",
+    company: "Sector 11",
+    period: "December 2024 - May 2025",
+    description:
+      "Contributed to building a market-driven e-commerce platform with a focus on user-centric design and branding.",
+    details: [
+      "Designed posters, logos, and creative assets using Adobe Photoshop and Illustrator",
+      "Conducted market research to design trending e-commerce websites for F1 merchandise (clothing and posters)",
+    ],
+    companyLink: "https://sector11.co/",
+  },
+  {
+    title: "AWS Cloud Computation Intern",
+    company: "AICTE",
+    period: "January 2024 - February 2024",
+    description:
+      "Formed a foundationa understanding of deploying, managing, and operating on the cloud.",
+    details: [
+      "Gained hands-on experience with AWS services, cloud concepts, security, architecture, pricing, and support.",
+      "Completed training on AWS cloud fundamentals, earning the AWS Cloud Foundation badge.",
+    ],
+  },
   {
     title: "Technical Content Writer",
     company: "DroomDroom",
-    period: "2022 - 2023",
+    period: "August 2023 - December 2023",
     description:
       "Crafted engaging and informative content to demystify complex technical concepts for a broad audience.",
     details: [
@@ -26,36 +61,8 @@ const experiences = [
       },
     ],
   },
-  {
-    title: "AWS Cloud Computation Intern",
-    company: "AICTE",
-    period: "January 2024 - February 2024",
-    description:
-      "Formed a foundationa understanding of deploying, managing, and operating on the cloud.",
-    details: [
-      "Gained hands-on experience with AWS services, cloud concepts, security, architecture, pricing, and support.",
-      "Completed training on AWS cloud fundamentals, earning the AWS Cloud Foundation badge.",
-    ],
-  },
-  {
-    title: "Designer & Web Developer",
-    company: "Sector 11",
-    period: "2023 - 2024",
-    description:
-      "Contributed to building a market-driven e-commerce platform with a focus on user-centric design and branding.",
-    details: [
-      "Designed posters, logos, and creative assets using Adobe Photoshop and Illustrator",
-      "Conducted market research to design trending e-commerce websites for F1 merchandise (clothing and posters)",
-    ],
-    companyLink: "https://sector11.co/",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Freelance/Self-Projects",
-    period: "2024 - Present",
-    description: "Built dynamic, API-driven web applications with a focus on functionality and clean code.",
-    details: ["Developed Next.js and TypeScript-based projects", "Created responsive and accessible user interfaces"],
-  },
+
+
 ]
 
 export default function Experience() {
