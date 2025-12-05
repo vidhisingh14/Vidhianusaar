@@ -95,7 +95,7 @@ export default function About() {
                 variant="outline"
                 className="mt-4 border-peach-300 hover:bg-peach-100 dark:border-gray-700 dark:hover:bg-gray-800"
               >
-                <a href="/resume.pdf" download="Vidhi_Resume.pdf" className="flex items-center">
+                <a href="/resume.pdf" download="resume.pdf" className="flex items-center">
                   <FileDown className="mr-2 h-4 w-4" />
                   Download Resume
                 </a>
